@@ -26,7 +26,6 @@ It is designed as a real-time voice \+ text AI system with document analysis, fi
 * Answer questions based on loaded documents  
 * Provide structured reasoning and analysis  
 * Act as a conversational AI assistant with voice output  
-* Support experimental multimodal input (images \+ text)
 
 ---
 
