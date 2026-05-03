@@ -85,7 +85,7 @@ class RickiCommandCenter:
         except:
             tk.Label(self.avatar_dock, text="PORTRAIT OFFLINE", fg="red", bg="#1a1a1a").pack()
 
-        tk.Label(self.sidebar, text="INTEL ASSETS", bg="#1a1a1a", fg="#00ffcc", font=("Courier", 11, "bold")).pack(pady=(20, 5))
+        tk.Label(self.sidebar, text="DOCUMENT LIBRARY", bg="#1a1a1a", fg="#00ffcc", font=("Courier", 11, "bold")).pack(pady=(20, 5))
         self.file_list_frame = tk.Frame(self.sidebar, bg="#1a1a1a")
         self.file_list_frame.pack(fill="both", expand=True)
 
@@ -174,7 +174,7 @@ class RickiCommandCenter:
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT}, 
                 {"role": "user", "content": [
-                    {"type": "text", "text": "Analyze this data for Father."},
+                    {"type": "text", "text": "Analyze this data."},
                     {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_image}"}}
                 ]}
             ]
