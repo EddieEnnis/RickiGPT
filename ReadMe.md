@@ -1,5 +1,5 @@
 **RickiGPT**  
-**(Offline AI Assistant System)**
+**(Offline AI Assistant)**
 
 RickiGPT is a fully offline, local AI assistant built using **Qwen2.5-7B-Instruct** running through LM Studio.  
 It is designed as a real-time voice \+ text AI system with document analysis, file ingestion, and multimodal interaction—all running locally with no cloud or external API dependencies.
