@@ -85,7 +85,7 @@ class RickiCommandCenter:
         except:
             tk.Label(self.avatar_dock, text="PORTRAIT OFFLINE", fg="red", bg="#1a1a1a").pack()
 
-        tk.Label(self.sidebar, text="DOCUMENT LIBRARY", bg="#1a1a1a", fg="#00ffcc", font=("Courier", 11, "bold")).pack(pady=(20, 5))
+        tk.Label(self.sidebar, text="Document Library", bg="#1a1a1a", fg="#00ffcc", font=("Courier", 11, "bold")).pack(pady=(20, 5))
         self.file_list_frame = tk.Frame(self.sidebar, bg="#1a1a1a")
         self.file_list_frame.pack(fill="both", expand=True)
 
@@ -150,15 +150,17 @@ class RickiCommandCenter:
         try:
             text = ""
             if fname.lower().endswith('.pdf'):
-                pdf = PyPDF2.PdfReader(open(path, 'rb'))
-                text = "\n".join([p.extract_text() for p in pdf.pages if p.extract_text()])
+               pdf = PyPDF2.PdfReader(open(path, 'rb'))
+               text = "\n".join([p.extract_text() for p in pdf.pages if p.extract_text()])
+               text = text[:8000]  # limits size safely
             elif fname.lower().endswith(('.docx', '.doc')):
                 text = "\n".join([p.text for p in Document(path).paragraphs])
             else:
                 text = open(path, 'r', encoding='utf-8').read()
             
             if text:
-                self.messages.append({"role": "user", "content": f"[INTEL ASSET: {fname}]\n{text}"})
+                text = text[8000:]  # limits size safely
+                self.messages.append({"role": "user", "content": f"[Document Library: {fname}]\n{text}"})
                 self.update_chat("SYSTEM", f"Asset '{fname}' integrated.")
                 tk.Label(self.file_list_frame, text=f"• {fname}", bg="#1a1a1a", fg="#00ffcc", font=("Consolas", 9)).pack(anchor="w", padx=20, pady=2)
         except Exception as e: 
