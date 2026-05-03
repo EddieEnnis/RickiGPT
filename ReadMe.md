@@ -1,4 +1,4 @@
-**Ricki GPT ReadMe**  
+**RickiGPT**  
 **(Offline AI Assistant System)**
 
 RickiGPT is a fully offline, local AI assistant built using **Qwen2.5-7B-Instruct** running through LM Studio.  
