@@ -11,8 +11,7 @@ It is designed as a real-time voice \+ text AI system with document analysis, fi
 * 100% offline AI assistant (no API or internet required for inference)  
 * Real-time chat interface built with Python (Tkinter UI)  
 * Voice output using Edge TTS with local playback  
-* PDF, DOCX, and text file ingestion for AI analysis  
-* Image upload support for visual analysis (optional multimodal mode)  
+* PDF, DOCX, and text file ingestion for AI analysis    
 * Persistent conversation memory during runtime  
 * WebSocket integration for external trigger systems (VNYAN support)  
 * Modular system prompt-driven architecture (“Ricki” identity system)
