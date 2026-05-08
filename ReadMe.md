@@ -69,7 +69,6 @@ RickiGPT can ingest and process:
 * **PDF files** → extracts full text for analysis  
 * **Word documents (.docx)** → parses paragraph content  
 * **Text files (.txt)** → direct reading  
-* **Images (optional)** → base64 encoded for AI vision-capable models
 
 Once uploaded, files are stored in session memory and can be referenced in conversation.
 
